@@ -4,6 +4,10 @@ body{
 	padding: 0;
 }
 
+a:hover{
+	text-decoration: none;
+}
+
 img{
 	height: 100%;
 }
@@ -21,9 +25,17 @@ header h1{
 	line-height: 1.6em;
 }
 
+#home, #home:hover{
+	color: inherit;
+}
+
 header h1 img{
 	height: 45px;
 	margin-right: 5px;
+}
+
+header .btn{
+	margin-top: 16px;
 }
 
 #stories{

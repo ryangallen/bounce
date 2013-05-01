@@ -1,14 +1,23 @@
+{% load staticfiles %}
+
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>bounce</title>
+	<title>Bounce</title>
 	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/master.css">
+	<link rel="stylesheet" href="{% static "css/master.css" %}">
+	<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 </head>
 <body>
 	<header>
-		<h1><img src="{{ STATIC_URL }}/img/coil.png" alt="coil">bounce</h1>
+		<h1>
+			<a href="/" id="home">
+				<img src="{% static "img/coil.png" %}" alt="coil">bounce
+			</a>
+			<a href="/story" class="btn pull-right">New Story</a>
+		</h1>
+
 	</header>
 	
 	<div id="content">
