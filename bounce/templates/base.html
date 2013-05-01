@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bounce</title>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ STATIC_URL }}/css/master.css">
+</head>
+<body>
+	<header>
+		<h1><img src="{{ STATIC_URL }}/img/coil.png" alt="coil">bounce</h1>
+	</header>
+	
+	<div id="content">
+		{% block content %}
+		{% endblock content %}
+	</div>
+</body>
+</html>

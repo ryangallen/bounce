@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load story_extras %}
+{% block content %}
+	<ul id="stories">
+	{% for story in stories %}
+		<li class="story">
+			<p class="story-title">
+				<a href="{{ story.url }}">{{ story.title }}</a> <span class="domain">{{ story.domain }}</span>
+			</p>
+			<p class="story-info">
+				{{ story.points }} points by {{ story.moderator.username }} {{ story.created_at|age }}
+			</p>
+		</li>
+	{% endfor %}
+	</ul>
+{% endblock content %}

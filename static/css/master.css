@@ -1,0 +1,53 @@
+body{
+	font-family: helvetica;
+	min-width: 400px;
+	padding: 0;
+}
+
+img{
+	height: 100%;
+}
+
+header, #content{
+	padding: 0 1em;
+}
+
+header{
+	border-bottom: 1px solid #DDD;
+}
+
+header h1{
+	font-weight: 300;
+	line-height: 1.6em;
+}
+
+header h1 img{
+	height: 45px;
+	margin-right: 5px;
+}
+
+#stories{
+	margin: 0;
+}
+
+.story{
+	list-style-type: none; 
+	border-bottom: 1px solid #EEE;
+	margin-top: 8px;
+}
+
+.story-title{
+	margin-bottom: 3px;
+}
+
+.domain{
+	color: #CDF;
+	font-weight: 300;
+	font-size: .9em;
+}
+
+.story-info{
+	font-size: .85em;
+	margin-bottom: 8px;
+	color:#444;
+}
