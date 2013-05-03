@@ -1,14 +1,23 @@
 {% extends "base.html" %}
 {% load story_extras %}
+
+{% block head %}
+	<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+	<script src="{{ STATIC_URL }}js/vote.js"></script>
+{% endblock head %}
+
 {% block content %}
 	<ul id="stories">
 	{% for story in stories %}
 		<li class="story">
+			<a href="/vote/" id="story-vote-{{ story.id }}" class="vote">
+				<img src="{{ STATIC_URL  }}img/arrow-up.jpeg" alt="arrow up" class="arrow">
+			</a>
 			<p class="story-title">
 				<a href="{{ story.url }}">{{ story.title }}</a> <span class="domain">{{ story.domain }}</span>
 			</p>
 			<p class="story-info">
-				{{ story.points }} points by {{ story.moderator.username }} {{ story.created_at|age }}
+				{{ story.points }} point{% if story.points != 1 %}s{% endif %} by {{ story.moderator.username }} {{ story.created_at|age }}
 			</p>
 		</li>
 	{% endfor %}
