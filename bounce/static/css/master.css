@@ -35,6 +35,8 @@ header h1{
 header h1 img{
 	height: 45px;
 	margin-right: 5px;
+	position: relative;
+	bottom: 3px;
 }
 
 #username{
