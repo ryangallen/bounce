@@ -24,7 +24,7 @@ $(function(){
 			data: {'story': storyID},
 			success: function(){
 				$('story-vote-' + storyID).hide();
-			}
+			},
 			headers: {
 				'X-CSRFToken': csrftoken
 			}
