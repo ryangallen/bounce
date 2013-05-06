@@ -23,8 +23,10 @@ $(function(){
 			url: '/vote/',
 			data: {'story': storyID},
 			success: function(){
-				$('story-vote-' + storyID).hide();
-			}
+				$('#story-vote-' + storyID).remove();
+				points = $('#points-' + storyID);
+				points.html(parseInt(points.html()) + 1);
+			},
 			headers: {
 				'X-CSRFToken': csrftoken
 			}

@@ -10,14 +10,16 @@
 	<ul id="stories">
 	{% for story in stories %}
 		<li class="story">
-			<a href="/vote/" id="story-vote-{{ story.id }}" class="vote">
-				<img src="{{ STATIC_URL  }}img/arrow-up.jpeg" alt="arrow up" class="arrow">
-			</a>
+			{% if user.is_authenticated and story not in liked_stories %}
+				<a href="/vote/" id="story-vote-{{ story.id }}" class="vote">
+					<img src="{{ STATIC_URL  }}img/arrow-up.jpeg" alt="arrow up" class="arrow">
+				</a>				
+			{% endif %}
 			<p class="story-title">
 				<a href="{{ story.url }}">{{ story.title }}</a> <span class="domain">{{ story.domain }}</span>
 			</p>
 			<p class="story-info">
-				{{ story.points }} point{% if story.points != 1 %}s{% endif %} by {{ story.moderator.username }} {{ story.created_at|age }}
+				<span id="points-{{story.id}}">{{ story.points }}</span> point{% if story.points != 1 %}s{% endif %} by {{ story.moderator.username }} {{ story.created_at|age }}
 			</p>
 		</li>
 	{% endfor %}
