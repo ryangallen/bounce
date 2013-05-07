@@ -56,5 +56,5 @@ def vote(request):
 		story.save()
 		user.liked_stories.add(story)
 		user.save()
-		logger.info(str(user) + ' voted up "' + str(story.title) + '"')
+		logger.info('\n' + str(user) + ' upvoted "' + str(story.title) + '"')
 	return HttpResponse()
